@@ -1,0 +1,105 @@
+.popover {
+
+  .popover-content {
+
+    word-break: break-all;
+
+  }
+}
+
+.dropdown {
+
+  .dropdown-toggle {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: $warm-grey;
+    background-color: adjust-lightness($cool-grey, -2%);
+    padding: 5px;
+    min-width: 160px;
+    position: relative;
+    z-index: 10;
+
+    &:before {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      content: "\f078";
+      font-family: 'FontAwesome';
+    }
+
+
+  }
+
+  &.open {
+    .dropdown-toggle {
+      &:before {
+        content: "\f077";
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: adjust-lightness($cool-grey, -2%);
+    @include border-radius(0);
+    @include box-shadow(0 5px 20px rgba(0,0,0,0.5));
+    top: auto;
+    list-style-type: none;
+    z-index: 5;
+
+    li {
+      cursor: pointer;
+      a {
+        color: $white;
+        padding: 5px;
+
+        &:hover {
+          color: $dark-aubergine;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  overflow: auto;
+
+  .modal-content {
+    @include border-radius(0);
+    @include box-shadow(none);
+    background: transparent;
+  }
+
+  &.modal-size_80 {
+    .modal-dialog {
+      width: 80%;
+    }
+  }
+
+  &.modal-size_70 {
+    .modal-dialog {
+      width: 70%;
+    }
+  }
+
+  &.modal-size_60 {
+    .modal-dialog {
+      width: 60%;
+    }
+  }
+
+  &.modal-size_50 {
+    .modal-dialog {
+      width: 50%;
+    }
+  }
+
+  &.modal-size_40 {
+    .modal-dialog {
+      width: 40%;
+    }
+  }
+}

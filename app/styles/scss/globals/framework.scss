@@ -1,0 +1,196 @@
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.fl {
+  float: left;
+  display: inline-block;
+}
+
+.fr {
+  float: right;
+  display: inline-block;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.pf {
+  position: fixed;
+}
+
+.ps {
+  position: static;
+}
+
+.none {
+  display: none;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.display-block{
+  display: block;
+}
+
+.display-inline{
+  display: inline;
+}
+
+.width-max{
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-8 {
+  @include text-size(8px);
+}
+
+.text-10 {
+  @include text-size(10px);
+}
+
+.text-12 {
+  @include text-size(12px);
+}
+
+.text-14 {
+  @include text-size(14px);
+}
+
+.text-15 {
+  @include text-size(15px);
+}
+
+.text-16 {
+  @include text-size(16px);
+}
+.text-17 {
+  @include text-size(18px);
+}
+
+.text-18 {
+  @include text-size(18px);
+}
+
+.text-20 {
+  @include text-size(20px);
+}
+
+.text-23 {
+  @include text-size(23px);
+}
+
+.text-24 {
+  @include text-size(24px);
+}
+
+.text-25 {
+  @include text-size(25px);
+}
+
+.text-26 {
+  @include text-size(26px);
+}
+
+.text-28 {
+  @include text-size(28px);
+}
+
+.text-30 {
+  @include text-size(30px);
+}
+
+.text-36 {
+  @include text-size(36px);
+}
+
+.text-40 {
+  @include text-size(40px);
+}
+
+.text-46 {
+  @include text-size(46px);
+}
+
+.text-50 {
+  @include text-size(50px);
+}
+
+.text-70 {
+  @include text-size(70px);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.bold,.text-bold {
+  font-weight: bold;
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.vertical-text-top {
+  vertical-align: text-top;
+}
+
+.border-radius {
+  @include border-radius($global-border-radius);
+}
+
+.box-shadow {
+  @include box-shadow($global-box-shadow);
+}
+
+.top-shadow {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 1;
+    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.2));
+  }
+}
