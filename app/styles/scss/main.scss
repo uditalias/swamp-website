@@ -17,7 +17,7 @@
 /*
  *  Components
  */
-
+@import "../../components/header/header";
 
 
 /*
@@ -30,3 +30,4 @@
  *  Pages
  */
 @import "../../pages/404/404";
+@import "../../pages/home/home";

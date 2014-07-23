@@ -1,3 +1,32 @@
 @include create-flex-group(null);
 @include create-margin-group(null);
 @include create-padding-group(null);
+
+@include create-flex-group("xs");
+@include create-margin-group("xs");
+@include create-padding-group("xs");
+
+@media (min-width: 768px) {
+  @include create-flex-group("sm");
+  @include create-margin-group("sm");
+  @include create-padding-group("sm");
+}
+@media (min-width: 992px) {
+  @include create-flex-group("md");
+  @include create-margin-group("md");
+  @include create-padding-group("md");
+}
+
+@media (min-width: 1200px) {
+  @include create-flex-group("lg");
+  @include create-margin-group("lg");
+  @include create-padding-group("lg");
+}
+
+
+
+
+
+
+
+

@@ -41,10 +41,12 @@
 
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 </head>
-<body ng-app="swamp" ng-controller="mainController">
+<body ng-app="swamp" ng-controller="mainController" sw-scroll-state on-page-scroll="onScroll(state)" scroll-offset="50" ng-class="{ 'scrolled': pageScrolled }">
 
-
-<div ui-view></div>
+<ng-include src="'components/header/header.html'"></ng-include>
+<div class="app-wrapper">
+    <div ui-view></div>
+</div>
 
 <!-- build:js /scripts/vendor.js -->
 <!-- bower:js -->
@@ -118,6 +120,8 @@
 <script src="/directives/checkbox/checkbox.js"></script>
 <script src="/directives/scroll_state/scrollState.js"></script>
 <script src="/directives/focus_bool/focusBool.js"></script>
+<script src="/directives/full_screen/fullScreen.js"></script>
+<script src="/directives/stretch/stretch.js"></script>
 <!-- directives -->
 
 

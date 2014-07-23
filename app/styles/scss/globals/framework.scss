@@ -1,3 +1,18 @@
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+
+
+
 .cf:before, .cf:after {
   content: "";
   display: table;
@@ -25,11 +40,11 @@
   margin: 0 auto;
 }
 
-.pa {
+.pa,.position-absolute {
   position: absolute;
 }
 
-.pr {
+.pr,.position-relative {
   position: relative;
 }
 
@@ -61,6 +76,24 @@
   width: 100%;
 }
 
+.height-max {
+  height: 100%;
+}
+
+a.link-no-style, a.link-no-style:hover{
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.hand {
+  cursor: pointer;
+  cursor: hand;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -81,6 +114,11 @@
   @include text-size(14px);
 }
 
+.text-13 {
+  @include text-size(13px);
+}
+
+
 .text-15 {
   @include text-size(15px);
 }
@@ -94,6 +132,10 @@
 
 .text-18 {
   @include text-size(18px);
+}
+
+.text-19 {
+  @include text-size(19px);
 }
 
 .text-20 {
@@ -124,12 +166,20 @@
   @include text-size(30px);
 }
 
+.text-32 {
+  @include text-size(32px);
+}
+
 .text-36 {
   @include text-size(36px);
 }
 
 .text-40 {
   @include text-size(40px);
+}
+
+.text-44 {
+  @include text-size(46px);
 }
 
 .text-46 {
@@ -144,9 +194,6 @@
   @include text-size(70px);
 }
 
-.text-italic {
-  font-style: italic;
-}
 
 .bold,.text-bold {
   font-weight: bold;
@@ -156,6 +203,28 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+
+
+.first {
+  padding-left: 0;
+}
+
+.last {
+  padding-right: 0;
 }
 
 .text-center{
@@ -174,23 +243,26 @@
   vertical-align: text-top;
 }
 
-.border-radius {
-  @include border-radius($global-border-radius);
+.vertical-text-top {
+  vertical-align: text-top;
 }
 
-.box-shadow {
-  @include box-shadow($global-box-shadow);
+.opacity-30 {
+  @include opacity(0.3);
 }
 
-.top-shadow {
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    z-index: 1;
-    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.2));
-  }
+.opacity-50 {
+  @include opacity(0.5);
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-border {
+  border: none !important;
 }

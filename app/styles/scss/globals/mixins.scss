@@ -1,10 +1,23 @@
+/*
+ *  MIXINS
+ */
+
+// Blur
+@mixin blur($size) {
+  -webkit-filter: blur($size);
+  -moz-filter: blur($size);
+  -ms-filter: blur($size);
+  -o-filter: blur($size);
+  filter: blur($size);
+}
+
 @mixin flexbox-flex($value){
 
-  -webkit-box-flex: $value;
-  -moz-box-flex: $value;
-  -webkit-flex: $value;
-  -ms-flex: $value;
-  flex: $value;
+    -webkit-box-flex: $value;
+    -moz-box-flex: $value;
+    -webkit-flex: $value;
+    -ms-flex: $value;
+    flex: $value;
 
 }
 
@@ -137,7 +150,7 @@
   }
 
   .flex#{$groupName}-wrap{
-    @include flexbox-flex-wrap;
+    @include flexbox-flex-wrap
   }
 
   @for $i from 1 through 12 {
@@ -157,21 +170,21 @@
     $groupName :  "-#{$size}";
   }
 
-  @for $i from 0 through 10 {
+  @for $i from 0 through 20 {
 
-    .margin#{$groupName}-top-#{$i}{
+    .margin#{$groupName}-top-#{$i*5}{
       margin-top: #{$i*5}px ;
     }
-    .margin#{$groupName}-left-#{$i}{
+    .margin#{$groupName}-left-#{$i*5}{
       margin-left: #{$i*5}px ;
     }
-    .margin#{$groupName}-right-#{$i}{
+    .margin#{$groupName}-right-#{$i*5}{
       margin-right: #{$i*5}px;
     }
-    .margin#{$groupName}-bottom-#{$i}{
+    .margin#{$groupName}-bottom-#{$i*5}{
       margin-bottom: #{$i*5}px;
     }
-    .margin#{$groupName}-#{$i}{
+    .margin#{$groupName}-#{$i*5}{
       margin: #{$i*5}px ;
     }
   }
@@ -185,20 +198,20 @@
     $groupName :  "-#{$size}";
   }
 
-  @for $i from 0 through 10 {
-    .padding#{$groupName}-top-#{$i}{
+  @for $i from 0 through 20 {
+    .padding#{$groupName}-top-#{$i*5}{
       padding-top: #{$i*5}px ;
     }
-    .padding#{$groupName}-left-#{$i}{
+    .padding#{$groupName}-left-#{$i*5}{
       padding-left: #{$i*5}px ;
     }
-    .padding#{$groupName}-right-#{$i}{
+    .padding#{$groupName}-right-#{$i*5}{
       padding-right: #{$i*5}px ;
     }
-    .padding#{$groupName}-bottom-#{$i}{
+    .padding#{$groupName}-bottom-#{$i*5}{
       padding-bottom: #{$i*5}px ;
     }
-    .padding#{$groupName}-#{$i}{
+    .padding#{$groupName}-#{$i*5}{
       padding: #{$i*5}px ;
     }
   }
@@ -210,3 +223,7 @@
     line-height: $size;
   }
 }
+
+
+
+

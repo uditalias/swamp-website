@@ -15,7 +15,6 @@ html {
 }
 
 body {
-
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -35,4 +34,8 @@ pre {
   font-family: 'Ubuntu Mono';
   font-weight: 400;
   border-left: solid 3px $warm-grey;
+}
+
+.app-wrapper {
+  margin-top: 73px;
 }
