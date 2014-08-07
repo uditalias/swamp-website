@@ -1,57 +1,47 @@
 .btn {
 
-  @include border-radius($global-border-radius);
-  @include transition(all 100ms);
-  color: $white;
-  border: none;
-  font-size: 16px;
-  background: $dark-aubergine;
-  border-bottom: solid 3px adjust-lightness($dark-aubergine, -20%);;
+  @include transition(all 200ms);
+  @include border-radius(0px);
+  border: solid 2px $logo-brown;
+  background: transparent;
+  color: $logo-brown;
+  font-weight: 100;
+  padding: 15px 30px;
 
-  &.btn-small {
-    font-size: 12px;
-  }
-
-  &[disabled] {
-    @include opacity(0.4);
-  }
-
-  &:active, &:focus, &:hover{
-    @include box-shadow(0 0 0 0 $white);
-    color: $white;
+  &:hover {
+    color: $logo-brown;
     outline: none;
   }
 
   &:active {
-    margin-top: 3px;
-    border-bottom-width: 0;
+    @include box-shadow(none);
+    color: $logo-brown;
+    outline: none;
   }
 
-  &.btn-green {
-    background-color: $green;
-    border-bottom-color: adjust-lightness($green, -20%);
+  &:focus {
+    @include box-shadow(none);
+    color: $logo-brown;
+    outline: none;
   }
 
-  &.btn-yellow {
-    background-color: $yellow;
-    border-bottom-color: adjust-lightness($yellow, -20%);
-  }
+  &.btn-primary {
+    background: $logo-brown;
+    color: $white;
 
-  &.btn-red {
-    background-color: $red;
-    border-bottom-color: adjust-lightness($red, -20%);
-  }
+    &:hover {
+      @include opacity(0.8);
+      border: solid 2px $logo-brown;
+    }
 
-  &.btn-blue {
-    background-color: $blue;
-    border-bottom-color: adjust-lightness($blue, -20%);
-  }
+    &:active {
+      @include opacity(0.9);
+      border: solid 2px $logo-brown;
+    }
 
-  &.btn-link {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
+    &:focus {
+      border: solid 2px $logo-brown;
+    }
   }
 
 }

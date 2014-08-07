@@ -1,0 +1,29 @@
+.sw-terminal {
+
+  @include border-radius(5px);
+  overflow: hidden;
+
+
+  .sw-terminal-buttons {
+
+    @include border-radius(5px 5px 0 0);
+
+    background: #EBEAEF;
+
+    i {
+      color: #D8D6DF;
+      font-size: 12px;
+      margin-right: 2px;
+    }
+
+  }
+
+  .sw-terminal-content {
+
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+
+  }
+
+}

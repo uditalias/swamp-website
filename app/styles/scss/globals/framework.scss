@@ -142,6 +142,10 @@ a.link-no-style, a.link-no-style:hover{
   @include text-size(20px);
 }
 
+.text-22 {
+  @include text-size(22px);
+}
+
 .text-23 {
   @include text-size(23px);
 }
@@ -188,6 +192,10 @@ a.link-no-style, a.link-no-style:hover{
 
 .text-50 {
   @include text-size(50px);
+}
+
+.text-56 {
+  @include text-size(56px);
 }
 
 .text-70 {

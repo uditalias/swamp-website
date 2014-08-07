@@ -31,11 +31,24 @@ ul {
 }
 
 pre {
-  font-family: 'Ubuntu Mono';
-  font-weight: 400;
-  border-left: solid 3px $warm-grey;
+  @include border-radius(0);
+  background: transparent;
+  border: none;
+  font-family: Consolas, Menlo, Courier, monospace;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+span.code {
+  padding: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f7f7f7;
+  @include border-radius(3px);
+  font-family: Consolas, Menlo, Courier, monospace;
 }
 
 .app-wrapper {
-  margin-top: 73px;
+
 }

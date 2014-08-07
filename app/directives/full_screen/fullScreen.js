@@ -12,9 +12,8 @@ angular.module('swamp.directives').directive('swFullScreen', ['$timeout', functi
 
             function _resize() {
 
-                var headerHeightOffset = $('header').outerHeight(true);
                 var w = $(window).outerWidth(true);
-                var h = $(window).outerHeight(true) - headerHeightOffset;
+                var h = $(window).outerHeight(true);
 
                 if(h < minHeight) {
                     h = minHeight;

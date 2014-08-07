@@ -1,27 +1,22 @@
 .home-header {
-  background-color: $blue;
-
-  .home-poster {
-    margin-top: -70px;
-  }
+  background-color: $logo-yellow;
+  background-image: radial-gradient( at 50% 50%, rgba(250,224,107,0.6) 0%,rgba(250,224,107,0) 75%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 
   .home-title {
 
-    margin-top: -70px;
-
     h2 {
-      font-style: italic;
-      font-weight: 100;
-      font-size: 48px;
-      color: $white;
+      font-weight: 500;
+      color: $logo-brown;
     }
 
     h3 {
-      color: $white;
-      font-size: 24px;
+      color: $logo-brown;
       font-weight: 100;
-      line-height: 32px;
     }
+
   }
 
   .home-header-footer {
@@ -31,14 +26,10 @@
     height: 70px;
     bottom: 0;
     left: 0;
-    background-color: $darkBlue;
 
   }
 }
 
-.home-video {
-  background-color: $cool-grey;
-  video {
-    @include opacity(0.1);
-  }
+.why-swamp-terminal {
+  min-height: 150px;
 }
