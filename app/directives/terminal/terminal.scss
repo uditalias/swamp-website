@@ -2,11 +2,9 @@
 
   @include border-radius(5px);
   overflow: hidden;
-
+  border: solid 3px #EBEAEF;
 
   .sw-terminal-buttons {
-
-    @include border-radius(5px 5px 0 0);
 
     background: #EBEAEF;
 
@@ -22,7 +20,7 @@
 
     font-size: 14px;
     color: #fff;
-    background: rgba(0,0,0,0.3);
+    background: #fff;
 
   }
 

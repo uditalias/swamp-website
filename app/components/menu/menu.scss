@@ -1,0 +1,25 @@
+.side-menu {
+  ul {
+    li {
+      font-size: 22px;
+      cursor: pointer;
+      margin-bottom: 15px;
+
+      &.active, &:hover {
+        font-weight: 700;
+      }
+
+      a {
+
+        &:hover {
+          color: $logo-yellow;
+          text-decoration: none;
+        }
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

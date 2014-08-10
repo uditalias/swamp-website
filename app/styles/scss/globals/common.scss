@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 
 html, body {
   margin: 0;
@@ -6,6 +10,7 @@ html, body {
   font-weight: 300;
   background: $white;
   color: $cool-grey;
+  height: 100%;
   >div[ui-view] {
   }
 }
@@ -15,6 +20,44 @@ html {
 }
 
 body {
+
+  @include transition(right 200ms);
+  position: relative;
+  right: 0;
+
+
+  &.scrolled {
+    .scroll-to-top {
+      @include opacity(1);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+      &:active {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &.sw-side-menu-open {
+    right: 260px;
+
+    .scroll-to-top {
+      right: 270px;
+    }
+  }
+
+  .scroll-to-top {
+    @include opacity(0);
+    @include transition(all 200ms);
+    @include border-radius(5px);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.15);
+    color: $white;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -30,12 +73,26 @@ ul {
   padding: 0;
 }
 
+a {
+  color: $logo-yellow;
+  &:hover {
+    color: $logo-brown;
+  }
+}
+
+a[name] {
+  color: $logo-brown;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 pre {
   @include border-radius(0);
   background: transparent;
   border: none;
   font-family: Consolas, Menlo, Courier, monospace;
-  color: #fff;
+  color: $logo-brown;
   font-size: 16px;
   margin-bottom: 0;
 }
@@ -50,5 +107,28 @@ span.code {
 }
 
 .app-wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
 
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
+}
+
+.hero-runner {
+  background-color: $logo-yellow;
+  background-image: radial-gradient( at 50% 50%, rgba(250,224,107,0.6) 0%,rgba(250,224,107,0) 75%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  min-height: 300px;
+  padding: 0 30px;
+  color: $logo-brown;
+
+  img {
+    max-height: 120px;
+  }
 }

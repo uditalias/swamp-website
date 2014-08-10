@@ -1,0 +1,11 @@
+.sw-side-menu {
+  @include transition(right 200ms);
+  @include box-shadow(inset 5px 0px 2px rgba(0, 0, 0, 0.25));
+  width: 260px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -260px;
+  background: $logo-brown;
+  z-index: 10;
+}

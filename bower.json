@@ -20,7 +20,8 @@
     "angular-once": "~0.1.5",
     "angular-bootstrap": "~0.11.0",
     "radio": "~0.2.0",
-    "jquery.cookie": "~1.4.1"
+    "jquery.cookie": "~1.4.1",
+    "markdown-js": "~0.6.2"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

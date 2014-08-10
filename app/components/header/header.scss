@@ -4,6 +4,13 @@
   background: #fff;
 
   .logo-wrapper {
+
+    .logo-icon {
+      img {
+        height: 30px;
+      }
+    }
+
     h1 {
       font-size: 26px;
     }
@@ -18,12 +25,25 @@
         }
       }
     }
+
+    .header-menu-small {
+      i {
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    }
+  }
+}
+
+.sw-side-menu-open {
+  header {
+    left: -260px;
   }
 }
 
 header {
 
-  @include transition(all 300ms);
+  @include transition(all 200ms);
   @include opacity(1);
   z-index: 1000;
   width: 100%;
@@ -32,6 +52,13 @@ header {
   left: 0;
 
   .logo-wrapper {
+
+    .logo-icon {
+      img {
+        @include transition(height 200ms);
+        height: 36px;
+      }
+    }
 
     h1 {
       @include transition(font-size 200ms);
@@ -58,14 +85,14 @@ header {
           padding-top: 20px;
           padding-bottom: 20px;
           border-top: solid 3px #edb917;
+          cursor: pointer;
 
-          &:hover {
+          &:hover, &.active {
             border-top: solid 3px #543729;
             background-color: rgba(84, 55, 41, 0.1);
           }
 
           a {
-            cursor: pointer;
             color: #543729;
             text-decoration: none;
             font-weight: 400;
@@ -78,6 +105,12 @@ header {
     }
 
     .header-menu-small {
+      i {
+        @include transition(padding 200ms);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: $logo-brown;
+      }
     }
 
   }

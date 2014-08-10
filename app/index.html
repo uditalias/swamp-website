@@ -26,8 +26,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Swamp - The Service Runner</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- build:css /styles/vendor.css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="Swamp - The Service Runner" />
+    <meta property="og:description" content="Swamp is a tool for running, managing and monitoring processes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://uditalias.github.io/swamp/" />
+    <meta property="og:image" content="http://uditalias.github.io/swamp/assets/images/swamp_logo.png" />
+    <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="lib/sass-bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/normalize-css/normalize.css" />
@@ -35,20 +40,26 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) /styles/main.css -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild -->
 
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
-<body ng-app="swamp" ng-controller="mainController" sw-scroll-state on-page-scroll="onScroll(state)" scroll-offset="50" ng-class="{ 'scrolled': pageScrolled }">
+<body ng-app="swamp" ng-controller="mainController" sw-scroll-state on-page-scroll="onScroll(state)" scroll-offset="100" ng-class="{ 'scrolled': pageScrolled }">
 
 <ng-include src="'components/header/header.html'"></ng-include>
 <div class="app-wrapper">
     <div ui-view></div>
 </div>
+<div class="scroll-to-top flex flex-align-center flex-pack-center cursor-pointer" ng-click="scrollTop()">
+    <i class="fa fa-angle-up text-32"></i>
+</div>
+<ng-include src="'components/footer/footer.html'"></ng-include>
 
-<!-- build:js /scripts/vendor.js -->
+
+
+<!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="lib/radio/radio.js"></script>
 <script src="lib/jquery/dist/jquery.js"></script>
@@ -68,10 +79,11 @@
 <script src="lib/socket.io-client/dist/socket.io.js"></script>
 <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="scripts/lib/perfect-scrollbar/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
+<script src="lib/markdown-js/dist/markdown.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({.tmp,app}) /scripts/scripts.js -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
 <!-- globals -->
 <script src="/scripts/app.js"></script>
 <script src="/scripts/run/rootScope.run.js"></script>
@@ -94,6 +106,7 @@
 
 <!-- filters -->
 <script src="/scripts/filters/trim.js"></script>
+<script src="/scripts/filters/md2html.js"></script>
 <!-- filters -->
 
 
@@ -110,6 +123,7 @@
 
 <!-- services -->
 <script src="/scripts/services/npmService.js"></script>
+<script src="/scripts/services/githubService.js"></script>
 <!-- services -->
 
 <!-- providers -->
@@ -124,6 +138,7 @@
 <script src="/directives/full_screen/fullScreen.js"></script>
 <script src="/directives/stretch/stretch.js"></script>
 <script src="/directives/terminal/terminal.js"></script>
+<script src="/directives/side_menu/sideMenu.js"></script>
 <!-- directives -->
 
 
@@ -142,12 +157,27 @@
 
 <script src="/pages/home/homeController.js"></script>
 <script src="/pages/home/homeState.js"></script>
+
+<script src="/pages/changelog/changelogController.js"></script>
+<script src="/pages/changelog/changelogState.js"></script>
+
+<script src="/pages/cli/cliController.js"></script>
+<script src="/pages/cli/cliState.js"></script>
+
+<script src="/pages/plugins/pluginsController.js"></script>
+<script src="/pages/plugins/pluginsState.js"></script>
+
+<script src="/pages/docs/docsController.js"></script>
+<script src="/pages/docs/docsState.js"></script>
+
+<script src="/pages/dashboard/dashboardController.js"></script>
+<script src="/pages/dashboard/dashboardState.js"></script>
 <!-- pages -->
 
 
 <!-- endbuild -->
 
-<!-- build:js({.tmp,app}) /scripts/templates.js -->
+<!-- build:js({.tmp,app}) scripts/templates.js -->
 
 <!-- endbuild -->
 

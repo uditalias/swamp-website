@@ -9,12 +9,14 @@
   padding: 15px 30px;
 
   &:hover {
+    @include opacity(0.8);
     color: $logo-brown;
     outline: none;
   }
 
   &:active {
     @include box-shadow(none);
+    @include opacity(0.9);
     color: $logo-brown;
     outline: none;
   }
@@ -30,12 +32,10 @@
     color: $white;
 
     &:hover {
-      @include opacity(0.8);
       border: solid 2px $logo-brown;
     }
 
     &:active {
-      @include opacity(0.9);
       border: solid 2px $logo-brown;
     }
 

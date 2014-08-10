@@ -1,0 +1,26 @@
+.changelog-container {
+
+  em {
+    display: block;
+  }
+
+  p {
+    margin-bottom: 40px;
+
+    &:first-child {
+      font-size: 32px;
+    }
+  }
+
+  a {
+    font-weight: 500;
+
+    &:before {
+      content: '[';
+    }
+
+    &:after {
+      content: ']';
+    }
+  }
+}
